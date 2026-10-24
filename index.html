@@ -399,17 +399,35 @@
     .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 12px;
     }
 
     .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border: 1px solid rgb(255 255 255 / 15%);
+      border-radius: 999px;
+      background: rgb(255 255 255 / 4%);
       color: var(--white);
       font-size: 0.88rem;
       text-decoration: none;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
     }
 
     .social-links a:hover {
+      background: rgb(255 255 255 / 8%);
+      border-color: rgb(255 255 255 / 30%);
+      transform: translateY(-1px);
       color: #ff9bb2;
+    }
+
+    .social-links svg {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
+      fill: currentColor;
     }
 
     .whatsapp-link {
@@ -688,7 +706,12 @@
       <p>&copy; <span id="current-year"></span> IntegralMENTE. Todos los derechos reservados.</p>
       <nav class="social-links" aria-label="Redes sociales">
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.linkedin.com/in/melissa-alvarezlozano/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/melissa-alvarezlozano/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.4a1.56 1.56 0 0 1 0 3.1ZM5.5 9.88h2.87v9.62H5.5V9.88Zm7.78 0h2.75v1.32h.04c.38-.73 1.32-1.5 2.72-1.5 2.91 0 3.45 1.91 3.45 4.4v5.4h-2.87v-5.06c0-1.21-.02-2.76-1.68-2.76-1.69 0-1.95 1.31-1.95 2.67v5.15h-2.86V9.88Z"></path>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
       </nav>
     </div>
   </footer>
